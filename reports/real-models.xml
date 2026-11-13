@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuites><testsuite name="filtered-from-all-tests" tests="2" failures="0" errors="0" skipped="0" timestamp="2026-11-13T10:39:56.770311+07:00" time="9.743"><testcase classname="tests.test_real_models" name="test_true_models_face_pose_person_and_sface_pair" time="1.168" /><testcase classname="tests.test_real_models" name="test_real_e2e_api_reference_calibration_events_evidence_review" time="8.575" /></testsuite></testsuites>

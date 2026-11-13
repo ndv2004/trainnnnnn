@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="vi">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exam Watch · Giám sát thử nghiệm</title><link rel="stylesheet" href="/assets/style.css"><script src="/assets/app.js" defer></script></head>
+<body>
+<header><a href="/" class="brand"><span class="mark">EW</span><span>Exam Watch<small>HỖ TRỢ GIÁM SÁT THI</small></span></a><span class="pill" id="readiness">Đang kiểm tra dịch vụ</span><a class="api-link" href="/docs" target="_blank" rel="noreferrer">Tài liệu API ↗</a></header>
+<main>
+<section class="intro"><div><span class="eyebrow">BẢN THỬ NGHIỆM ĐỘC LẬP · CPU</span><h1>Quan sát có căn cứ.<br>Quyết định bởi con người.</h1><p>AI ghi nhận dấu hiệu và khoảng không quan sát được để giám thị xem xét. Kết quả không phải kết luận gian lận.</p></div><aside><b>01 webcam · 01 thí sinh</b><p>Minh chứng có quyền truy cập. Không lưu toàn bộ video.</p><span class="pill muted">Hướng nhìn: thử nghiệm, mặc định tắt</span><span class="pill muted">Chống giả mạo: chưa khả dụng</span></aside></section>
+<nav aria-label="Chọn màn hình"><button class="tab active" data-tab="candidate">Thí sinh</button><button class="tab" data-tab="proctor">Giám thị</button><button class="tab" data-tab="admin">Hồ sơ chuẩn</button><span class="demo-label">Tài khoản giả danh · chỉ localhost</span></nav>
+<section id="candidate" class="screen">
+ <div class="grid">
+  <article class="card"><div class="card-head"><h2>Nguồn hình ảnh</h2><span class="dot-label" id="source-status">Chưa mở camera</span></div>
+   <div class="preview"><video id="video" autoplay playsinline muted></video><canvas id="overlay"></canvas><div id="empty-preview">Mở webcam hoặc chọn video trên máy để bắt đầu.</div></div>
+   <div class="toolbar"><button id="camera">Mở webcam</button><label class="button secondary">Chọn video<input id="video-file" type="file" accept="video/*" hidden></label><button id="stop-camera" class="secondary">Tắt nguồn ảnh</button></div>
+   <p class="hint">Video được đọc trên máy và gửi từng ảnh JPEG. Luồng webcam và video đều đi qua API thật.</p>
+   <div id="quality" class="quality">Chưa có quan sát mới.</div>
+  </article>
+  <article class="card"><h2>Chuẩn bị phiên thử</h2><p class="hint">Hồ sơ chuẩn phải được quản trị viên đăng ký riêng trước khi xác thực.</p>
+   <label>Tài khoản thí sinh<select id="candidate-account"><option value="candidate_a">Thí sinh A</option><option value="candidate_b">Thí sinh B</option></select></label>
+   <label class="check"><input id="consent" type="checkbox">Tôi đồng ý gửi ảnh để thử nghiệm giám sát; lưu tối đa 3 ảnh/sự kiện trong 30 ngày. Tôi có thể dừng tham gia và yêu cầu quản trị xóa hồ sơ.</label>
+   <button id="create-session">Tạo / mở phiên</button>
+   <div class="session-line"><span>Phiên</span><code id="session-id">Chưa tạo</code><b id="session-state">—</b></div>
+   <ol class="steps"><li><b>Kiểm tra ảnh</b><p>Độ sáng, độ rõ và đúng một khuôn mặt.</p><button id="precheck" class="secondary">Kiểm tra camera</button></li><li><b>Xác thực danh tính</b><p>So khớp SFace với hồ sơ chuẩn đã đăng ký.</p><button id="verify" class="secondary">Xác thực khuôn mặt</button></li><li><b>Hiệu chỉnh</b><p>Nhìn bình thường vào màn hình và giữ đầu ổn định khoảng 3 giây.</p><button id="calibrate" class="secondary">Thu mẫu hiệu chỉnh</button></li></ol>
+   <div class="toolbar"><button id="start">Bắt đầu giám sát</button><button id="resume" class="secondary">Khôi phục luồng</button><button id="end" class="danger">Dừng tham gia</button></div>
+   <p id="candidate-feedback" class="feedback" role="status">Thực hiện lần lượt các bước chuẩn bị.</p>
+  </article>
+ </div>
+ <article class="card"><div class="card-head"><h2>Sức khỏe mô-đun</h2><span class="hint">Dữ liệu hết hạn hiển thị UNKNOWN.</span></div><div id="modules" class="modules"></div></article>
+</section>
+<section id="proctor" class="screen" hidden>
+ <article class="card"><div class="card-head"><div><h2>Phiên được phân công</h2><p class="hint">Dấu hiệu giao nhau được nhóm theo thời gian; không đếm thành số lần vi phạm.</p></div><div class="toolbar"><select id="proctor-account"><option value="proctor_a">Giám thị A</option><option value="proctor_b">Giám thị B</option><option value="outsider">Ngoài phân công (thử quyền)</option></select><button id="load-sessions">Tải danh sách</button></div></div>
+ <select id="proctor-session"><option value="">Chọn phiên</option></select><div id="proctor-state" class="feedback"></div><div class="toolbar"><button id="verification-history" class="secondary">Lịch sử xác thực</button><button id="manual-accept" class="secondary">Chấp nhận xác thực thủ công</button><button id="manual-retry" class="secondary">Cho phép xác thực lại</button><label class="inline">Lý do<input id="manual-reason" placeholder="Căn cứ giám thị đã kiểm tra"></label></div></article>
+ <article class="card"><div class="card-head"><h2>Dòng thời gian</h2><select id="event-filter"><option value="">Tất cả trạng thái</option><option>UNREVIEWED</option><option>DISMISSED</option><option>NEEDS_FOLLOWUP</option><option>CONFIRMED_OBSERVATION</option></select></div><p id="proctor-feedback" class="feedback" role="status"></p><div id="timeline" class="timeline">Chưa chọn phiên.</div></article>
+</section>
+<section id="admin" class="screen" hidden>
+ <article class="card narrow"><span class="eyebrow">HỒ SƠ CHUẨN DO QUẢN TRỊ QUẢN LÝ</span><h2>Đăng ký từ nguồn đã xác minh</h2><p>Chọn ảnh đã được người tổ chức kiểm tra riêng. Hệ thống chỉ lưu vector SFace được mã hóa; thí sinh không có quyền thay hồ sơ qua API này.</p><label>Thí sinh<select id="profile-candidate"><option value="demo-candidate-a">Thí sinh A</option><option value="demo-candidate-b">Thí sinh B</option></select></label><label>Ảnh chuẩn JPEG<input id="profile-file" type="file" accept="image/jpeg"></label><label>Mã nguồn xác minh<input id="profile-source" placeholder="Ví dụ: doi-soat-truc-tiep-dot-thu-01"></label><label class="check"><input id="profile-attest" type="checkbox">Tôi đã đối soát ảnh chuẩn và được phép sử dụng cho thử nghiệm này.</label><div class="toolbar"><button id="enroll">Đăng ký hồ sơ</button><button id="delete-profile" class="danger">Xóa hồ sơ</button></div><p id="admin-feedback" class="feedback" role="status"></p></article>
+</section>
+<details class="card"><summary>Thông tin thao tác gần nhất</summary><pre id="details">Không ghi token, ảnh hoặc vector vào phần này.</pre></details>
+</main><footer>Exam Watch 0.1 · Các ngưỡng hiện tại là cấu hình thử nghiệm, chưa phải chất lượng nghiệm thu.<span id="connection">API cục bộ</span></footer>
+<dialog id="evidence-dialog"><button id="close-evidence" class="secondary">Đóng minh chứng</button><img id="evidence-image" alt="Ảnh minh chứng có quyền truy cập"></dialog>
+</body></html>

@@ -1,0 +1,6 @@
+{
+  "scope": "Real TCP/HTTP liveness, readiness, HTML and OpenAPI with CPU model loading",
+  "status": "PASS",
+  "readiness": "READY",
+  "endpoints": 5
+}

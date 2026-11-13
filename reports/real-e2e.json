@@ -1,0 +1,44 @@
+{
+  "scope": "functional smoke, not model quality acceptance",
+  "real_models": {
+    "face_detection": {
+      "name": "face_detection_yunet_2023mar.onnx",
+      "sha256": "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4",
+      "runtime": "CPU",
+      "license_ref": "MIT",
+      "source": "https://github.com/opencv/opencv_zoo/tree/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_detection_yunet",
+      "metrics_ref": null
+    },
+    "object_detection": {
+      "name": "object_detection_nanodet_2022nov.onnx",
+      "sha256": "4b82da9944b88577175ee23a459dce2e26e6e4be573def65b1055dc2d9720186",
+      "runtime": "CPU",
+      "license_ref": "Apache-2.0",
+      "source": "https://github.com/opencv/opencv_zoo/tree/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/object_detection_nanodet",
+      "metrics_ref": null
+    },
+    "face_verification": {
+      "name": "face_recognition_sface_2021dec.onnx",
+      "sha256": "0ba9fbfa01b5270c96627c4ef784da859931e02f04419c829e83484087c34e79",
+      "runtime": "CPU",
+      "license_ref": "Apache-2.0",
+      "source": "https://github.com/opencv/opencv_zoo/tree/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_recognition_sface",
+      "metrics_ref": null
+    },
+    "head_pose": {
+      "name": "face_landmarker.task",
+      "sha256": "64184e229b263107bc2b804c6625db1341ff2bb731874b0bcc2fe6544e0bc9ff",
+      "runtime": "CPU",
+      "license_ref": "Apache-2.0",
+      "source": "https://ai.google.dev/edge/mediapipe/solutions/vision/face_landmarker",
+      "metrics_ref": null
+    }
+  },
+  "actual_event_types": [
+    "FACE_NOT_VISIBLE"
+  ],
+  "evidence": "encrypted and read through authorized API",
+  "identity": "same public reference image reused; not FAR/FRR",
+  "calibration": "12 real MediaPipe samples",
+  "host": "Linux container CPU, not the target Windows laptop"
+}

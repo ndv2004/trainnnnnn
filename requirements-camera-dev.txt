@@ -1,0 +1,8 @@
+# Optional tools for the standalone tests; runtime dependencies stay separate.
+-r requirements-camera.txt
+pytest==9.2.0
+ruff==0.17.5
+colorama==0.4.6
+iniconfig==2.3.1
+pluggy==1.7.0
+Pygments==2.21.0

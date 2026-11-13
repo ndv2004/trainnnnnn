@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "version": "cfg-cpu-1",
+  "max_gap_ms": 1500,
+  "cooldown_ms": 3000,
+  "camera_interrupted_ms": 3000,
+  "max_requests_per_second": 5,
+  "max_active_sessions": 2,
+  "max_queue_age_ms": 1500,
+  "max_offset_skew_ms": 1500,
+  "max_image_bytes": 1048576,
+  "max_width": 1920,
+  "max_height": 1080,
+  "min_brightness": 40.0,
+  "max_brightness": 225.0,
+  "min_sharpness": 30.0,
+  "min_face_pixels": 70,
+  "face_confidence": 0.8,
+  "confidence_person": 0.6,
+  "confidence_phone": 0.65,
+  "object_interval_ms": 500,
+  "yaw_open": 25.0,
+  "pitch_open": 20.0,
+  "yaw_clear": 15.0,
+  "pitch_clear": 12.0,
+  "max_pose_angle": 65.0,
+  "min_eye_ratio": 0.12,
+  "gaze_enabled": false,
+  "gaze_delta": 0.2,
+  "calibration_samples": 10,
+  "calibration_duration_ms": 2000,
+  "calibration_max_std_deg": 5.0,
+  "verify_attempt_limit": 3,
+  "verification_interval_ms": 60000,
+  "identity_window_ms": 180000,
+  "verification_cosine_threshold": 0.363,
+  "turn_min_ms": 500,
+  "neutral_min_ms": 500,
+  "turn_window_ms": 60000,
+  "turn_count": 4,
+  "evidence_days": 30,
+  "evidence_max_per_event": 3,
+  "evidence_interval_ms": 10000,
+  "required_modules": [
+    "face_detection",
+    "object_detection",
+    "face_verification",
+    "head_pose"
+  ],
+  "rules": {
+    "FACE_NOT_VISIBLE": {
+      "open_ms": 3000,
+      "samples": 5,
+      "clear_ms": 1000
+    },
+    "MULTIPLE_PEOPLE": {
+      "open_ms": 2000,
+      "samples": 3,
+      "clear_ms": 1000
+    },
+    "MULTIPLE_FACES": {
+      "open_ms": 2000,
+      "samples": 3,
+      "clear_ms": 1000
+    },
+    "PHONE_VISIBLE": {
+      "open_ms": 1000,
+      "samples": 3,
+      "clear_ms": 1000
+    },
+    "HEAD_AWAY": {
+      "open_ms": 4000,
+      "samples": 5,
+      "clear_ms": 1000
+    },
+    "GAZE_AWAY": {
+      "open_ms": 5000,
+      "samples": 5,
+      "clear_ms": 1000
+    }
+  }
+}

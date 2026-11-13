@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "opencv_zoo_commit": "48b10fa505aeb51fbd127fc60a5c660040e823b7",
+  "models": [
+    {
+      "module": "face_detection",
+      "file": "face_detection_yunet_2023mar.onnx",
+      "url": "https://media.githubusercontent.com/media/opencv/opencv_zoo/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_detection_yunet/face_detection_yunet_2023mar.onnx",
+      "sha256": "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4",
+      "checksum_source": "OpenCV Zoo Git-LFS oid at pinned commit",
+      "license": "MIT",
+      "source": "https://github.com/opencv/opencv_zoo/tree/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_detection_yunet"
+    },
+    {
+      "module": "face_verification",
+      "file": "face_recognition_sface_2021dec.onnx",
+      "url": "https://media.githubusercontent.com/media/opencv/opencv_zoo/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_recognition_sface/face_recognition_sface_2021dec.onnx",
+      "sha256": "0ba9fbfa01b5270c96627c4ef784da859931e02f04419c829e83484087c34e79",
+      "checksum_source": "OpenCV Zoo Git-LFS oid at pinned commit",
+      "license": "Apache-2.0",
+      "source": "https://github.com/opencv/opencv_zoo/tree/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_recognition_sface"
+    },
+    {
+      "module": "object_detection",
+      "file": "object_detection_nanodet_2022nov.onnx",
+      "url": "https://media.githubusercontent.com/media/opencv/opencv_zoo/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/object_detection_nanodet/object_detection_nanodet_2022nov.onnx",
+      "sha256": "4b82da9944b88577175ee23a459dce2e26e6e4be573def65b1055dc2d9720186",
+      "checksum_source": "OpenCV Zoo Git-LFS oid at pinned commit",
+      "license": "Apache-2.0",
+      "source": "https://github.com/opencv/opencv_zoo/tree/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/object_detection_nanodet"
+    },
+    {
+      "module": "head_pose",
+      "file": "face_landmarker.task",
+      "url": "https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task",
+      "sha256": "64184e229b263107bc2b804c6625db1341ff2bb731874b0bcc2fe6544e0bc9ff",
+      "upstream_hash": "crc32c=2FSEdQ==",
+      "checksum_source": "Google x-goog-hash CRC32C verified at initial download; SHA256 pinned locally",
+      "license": "Apache-2.0",
+      "source": "https://ai.google.dev/edge/mediapipe/solutions/vision/face_landmarker",
+      "model_card": "https://storage.googleapis.com/mediapipe-assets/Model%20Card%20MediaPipe%20Face%20Mesh%20V2.pdf"
+    }
+  ]
+}

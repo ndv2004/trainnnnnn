@@ -1,0 +1,8 @@
+{
+  "status": "BLOCKED",
+  "scope": "Execution on target Windows laptop",
+  "reason": "Environment is Linux, no physical webcam or i7-10510U/MX130 laptop is attached. PowerShell runtime is not installed.",
+  "binary_distribution_check": "PASS: all 46 pinned Linux-selected dependency versions have win_amd64 or universal wheels for Python 3.12; downloaded with pip --no-deps. Windows-only dependency closure requires actual Windows installation.",
+  "cuda": "not required or used",
+  "additional_pin": "Colorama 0.4.6 installed/verified as universal wheel; 47 pins in final requirements"
+}

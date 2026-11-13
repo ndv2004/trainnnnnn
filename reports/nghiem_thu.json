@@ -1,0 +1,1133 @@
+[
+  {
+    "test_id": "TC01",
+    "requirement_ids": [
+      "REQ-01",
+      "FR-17"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "API",
+    "input_ref": "tests/test_api.py",
+    "expected": "Một phiên cho attempt/idempotency",
+    "actual": "Unique/duplicate/body collision đã kiểm",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "TC02",
+    "requirement_ids": [
+      "REQ-02",
+      "FR-01"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "API",
+    "input_ref": "tests/test_api.py",
+    "expected": "Không tự đăng ký khi thiếu chuẩn",
+    "actual": "INCONCLUSIVE, score null, không có profile phát sinh",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "TC03",
+    "requirement_ids": [
+      "REQ-03",
+      "FR-02"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": [
+      {
+        "module": "face_detection",
+        "file": "face_detection_yunet_2023mar.onnx",
+        "url": "https://media.githubusercontent.com/media/opencv/opencv_zoo/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_detection_yunet/face_detection_yunet_2023mar.onnx",
+        "sha256": "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4",
+        "checksum_source": "OpenCV Zoo Git-LFS oid at pinned commit",
+        "license": "MIT",
+        "source": "https://github.com/opencv/opencv_zoo/tree/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_detection_yunet"
+      },
+      {
+        "module": "face_verification",
+        "file": "face_recognition_sface_2021dec.onnx",
+        "url": "https://media.githubusercontent.com/media/opencv/opencv_zoo/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_recognition_sface/face_recognition_sface_2021dec.onnx",
+        "sha256": "0ba9fbfa01b5270c96627c4ef784da859931e02f04419c829e83484087c34e79",
+        "checksum_source": "OpenCV Zoo Git-LFS oid at pinned commit",
+        "license": "Apache-2.0",
+        "source": "https://github.com/opencv/opencv_zoo/tree/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_recognition_sface"
+      },
+      {
+        "module": "object_detection",
+        "file": "object_detection_nanodet_2022nov.onnx",
+        "url": "https://media.githubusercontent.com/media/opencv/opencv_zoo/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/object_detection_nanodet/object_detection_nanodet_2022nov.onnx",
+        "sha256": "4b82da9944b88577175ee23a459dce2e26e6e4be573def65b1055dc2d9720186",
+        "checksum_source": "OpenCV Zoo Git-LFS oid at pinned commit",
+        "license": "Apache-2.0",
+        "source": "https://github.com/opencv/opencv_zoo/tree/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/object_detection_nanodet"
+      },
+      {
+        "module": "head_pose",
+        "file": "face_landmarker.task",
+        "url": "https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task",
+        "sha256": "64184e229b263107bc2b804c6625db1341ff2bb731874b0bcc2fe6544e0bc9ff",
+        "upstream_hash": "crc32c=2FSEdQ==",
+        "checksum_source": "Google x-goog-hash CRC32C verified at initial download; SHA256 pinned locally",
+        "license": "Apache-2.0",
+        "source": "https://ai.google.dev/edge/mediapipe/solutions/vision/face_landmarker",
+        "model_card": "https://storage.googleapis.com/mediapipe-assets/Model%20Card%20MediaPipe%20Face%20Mesh%20V2.pdf"
+      }
+    ],
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "REAL_MODEL",
+    "input_ref": "tests/test_real_models.py;tests/test_quality_eval.py",
+    "expected": "Ảnh kém không MATCH, trả lý do",
+    "actual": "Quality dark/blur/multiple/small unit; bad-image precheck bị chặn rồi ảnh rõ MATCH trong real E2E",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "TC04",
+    "requirement_ids": [
+      "FR-01"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": [
+      {
+        "module": "face_detection",
+        "file": "face_detection_yunet_2023mar.onnx",
+        "url": "https://media.githubusercontent.com/media/opencv/opencv_zoo/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_detection_yunet/face_detection_yunet_2023mar.onnx",
+        "sha256": "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4",
+        "checksum_source": "OpenCV Zoo Git-LFS oid at pinned commit",
+        "license": "MIT",
+        "source": "https://github.com/opencv/opencv_zoo/tree/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_detection_yunet"
+      },
+      {
+        "module": "face_verification",
+        "file": "face_recognition_sface_2021dec.onnx",
+        "url": "https://media.githubusercontent.com/media/opencv/opencv_zoo/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_recognition_sface/face_recognition_sface_2021dec.onnx",
+        "sha256": "0ba9fbfa01b5270c96627c4ef784da859931e02f04419c829e83484087c34e79",
+        "checksum_source": "OpenCV Zoo Git-LFS oid at pinned commit",
+        "license": "Apache-2.0",
+        "source": "https://github.com/opencv/opencv_zoo/tree/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_recognition_sface"
+      },
+      {
+        "module": "object_detection",
+        "file": "object_detection_nanodet_2022nov.onnx",
+        "url": "https://media.githubusercontent.com/media/opencv/opencv_zoo/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/object_detection_nanodet/object_detection_nanodet_2022nov.onnx",
+        "sha256": "4b82da9944b88577175ee23a459dce2e26e6e4be573def65b1055dc2d9720186",
+        "checksum_source": "OpenCV Zoo Git-LFS oid at pinned commit",
+        "license": "Apache-2.0",
+        "source": "https://github.com/opencv/opencv_zoo/tree/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/object_detection_nanodet"
+      },
+      {
+        "module": "head_pose",
+        "file": "face_landmarker.task",
+        "url": "https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task",
+        "sha256": "64184e229b263107bc2b804c6625db1341ff2bb731874b0bcc2fe6544e0bc9ff",
+        "upstream_hash": "crc32c=2FSEdQ==",
+        "checksum_source": "Google x-goog-hash CRC32C verified at initial download; SHA256 pinned locally",
+        "license": "Apache-2.0",
+        "source": "https://ai.google.dev/edge/mediapipe/solutions/vision/face_landmarker",
+        "model_card": "https://storage.googleapis.com/mediapipe-assets/Model%20Card%20MediaPipe%20Face%20Mesh%20V2.pdf"
+      }
+    ],
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "REAL_MODEL",
+    "input_ref": "tests/test_real_models.py",
+    "expected": "Cặp chính chủ/khác người đủ dữ liệu",
+    "actual": "Smoke 1 self-image pair và 1 other-image pair PASS; chưa có tập cặp thi FAR/FRR",
+    "status": "BLOCKED",
+    "evidence_ref": "reports/BAO_CAO_KIEM_THU.md",
+    "tester": "Codex automated execution",
+    "executed_at": null
+  },
+  {
+    "test_id": "TC05",
+    "requirement_ids": [
+      "FR-02"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "API",
+    "input_ref": "tests/test_history.py",
+    "expected": "Ba NO_MATCH phải chờ giám thị",
+    "actual": "Ba vector không khớp đủ chuẩn trong fixture API, khóa lần thứ tư; không phải chất lượng nhận diện",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "TC06",
+    "requirement_ids": [
+      "FR-03"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "ANTI_SPOOF",
+    "input_ref": "docs/QUYET_DINH.md",
+    "expected": "Từ chối nonce dùng lại",
+    "actual": "Không triển khai anti-spoof; challenge UNAVAILABLE, không có đường thành công giả",
+    "status": "BLOCKED",
+    "evidence_ref": "reports/BAO_CAO_KIEM_THU.md",
+    "tester": "Codex automated execution",
+    "executed_at": null
+  },
+  {
+    "test_id": "TC07",
+    "requirement_ids": [
+      "FR-04"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "API",
+    "input_ref": "tests/test_api.py;tests/test_real_models.py",
+    "expected": "Thiếu mắt/đổi thiết bị phải làm lại",
+    "actual": "Missing-eyes fixture không pass; camera_id đổi làm mất baseline; real calibration bình thường PASS",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "TC08",
+    "requirement_ids": [
+      "FR-06",
+      "FR-13"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "ENGINE",
+    "input_ref": "tests/test_engine.py",
+    "expected": "2,9 giây chưa mở",
+    "actual": "Biên thời gian fake-clock trước 3 giây không tạo event",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "TC09",
+    "requirement_ids": [
+      "FR-06",
+      "FR-13"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "ENGINE_REAL_PIPELINE",
+    "input_ref": "tests/test_engine.py;tests/test_real_models.py",
+    "expected": "3 giây và đủ mẫu tạo 1 event từ đầu chuỗi",
+    "actual": "Boundary unit và real API absence scene tạo đúng 1 FACE_NOT_VISIBLE",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "TC10",
+    "requirement_ids": [
+      "FR-12"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "API",
+    "input_ref": "tests/test_api.py",
+    "expected": "Thiếu ảnh tạo kỹ thuật, không absence",
+    "actual": "Heartbeat +5 giây ghi CAMERA_INTERRUPTED; resume luồng mới",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "TC11",
+    "requirement_ids": [
+      "FR-05"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": [
+      {
+        "module": "face_detection",
+        "file": "face_detection_yunet_2023mar.onnx",
+        "url": "https://media.githubusercontent.com/media/opencv/opencv_zoo/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_detection_yunet/face_detection_yunet_2023mar.onnx",
+        "sha256": "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4",
+        "checksum_source": "OpenCV Zoo Git-LFS oid at pinned commit",
+        "license": "MIT",
+        "source": "https://github.com/opencv/opencv_zoo/tree/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_detection_yunet"
+      },
+      {
+        "module": "face_verification",
+        "file": "face_recognition_sface_2021dec.onnx",
+        "url": "https://media.githubusercontent.com/media/opencv/opencv_zoo/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_recognition_sface/face_recognition_sface_2021dec.onnx",
+        "sha256": "0ba9fbfa01b5270c96627c4ef784da859931e02f04419c829e83484087c34e79",
+        "checksum_source": "OpenCV Zoo Git-LFS oid at pinned commit",
+        "license": "Apache-2.0",
+        "source": "https://github.com/opencv/opencv_zoo/tree/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_recognition_sface"
+      },
+      {
+        "module": "object_detection",
+        "file": "object_detection_nanodet_2022nov.onnx",
+        "url": "https://media.githubusercontent.com/media/opencv/opencv_zoo/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/object_detection_nanodet/object_detection_nanodet_2022nov.onnx",
+        "sha256": "4b82da9944b88577175ee23a459dce2e26e6e4be573def65b1055dc2d9720186",
+        "checksum_source": "OpenCV Zoo Git-LFS oid at pinned commit",
+        "license": "Apache-2.0",
+        "source": "https://github.com/opencv/opencv_zoo/tree/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/object_detection_nanodet"
+      },
+      {
+        "module": "head_pose",
+        "file": "face_landmarker.task",
+        "url": "https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task",
+        "sha256": "64184e229b263107bc2b804c6625db1341ff2bb731874b0bcc2fe6544e0bc9ff",
+        "upstream_hash": "crc32c=2FSEdQ==",
+        "checksum_source": "Google x-goog-hash CRC32C verified at initial download; SHA256 pinned locally",
+        "license": "Apache-2.0",
+        "source": "https://ai.google.dev/edge/mediapipe/solutions/vision/face_landmarker",
+        "model_card": "https://storage.googleapis.com/mediapipe-assets/Model%20Card%20MediaPipe%20Face%20Mesh%20V2.pdf"
+      }
+    ],
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "REAL_MODEL",
+    "input_ref": "tests/test_engine.py",
+    "expected": "2 người đủ 2 giây có hộp/ảnh",
+    "actual": "Rule 2 giây PASS; model smoke mới có một người, chưa kiểm video 2 người",
+    "status": "BLOCKED",
+    "evidence_ref": "reports/BAO_CAO_KIEM_THU.md",
+    "tester": "Codex automated execution",
+    "executed_at": null
+  },
+  {
+    "test_id": "TC12",
+    "requirement_ids": [
+      "FR-05"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": [
+      {
+        "module": "face_detection",
+        "file": "face_detection_yunet_2023mar.onnx",
+        "url": "https://media.githubusercontent.com/media/opencv/opencv_zoo/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_detection_yunet/face_detection_yunet_2023mar.onnx",
+        "sha256": "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4",
+        "checksum_source": "OpenCV Zoo Git-LFS oid at pinned commit",
+        "license": "MIT",
+        "source": "https://github.com/opencv/opencv_zoo/tree/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_detection_yunet"
+      },
+      {
+        "module": "face_verification",
+        "file": "face_recognition_sface_2021dec.onnx",
+        "url": "https://media.githubusercontent.com/media/opencv/opencv_zoo/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_recognition_sface/face_recognition_sface_2021dec.onnx",
+        "sha256": "0ba9fbfa01b5270c96627c4ef784da859931e02f04419c829e83484087c34e79",
+        "checksum_source": "OpenCV Zoo Git-LFS oid at pinned commit",
+        "license": "Apache-2.0",
+        "source": "https://github.com/opencv/opencv_zoo/tree/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_recognition_sface"
+      },
+      {
+        "module": "object_detection",
+        "file": "object_detection_nanodet_2022nov.onnx",
+        "url": "https://media.githubusercontent.com/media/opencv/opencv_zoo/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/object_detection_nanodet/object_detection_nanodet_2022nov.onnx",
+        "sha256": "4b82da9944b88577175ee23a459dce2e26e6e4be573def65b1055dc2d9720186",
+        "checksum_source": "OpenCV Zoo Git-LFS oid at pinned commit",
+        "license": "Apache-2.0",
+        "source": "https://github.com/opencv/opencv_zoo/tree/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/object_detection_nanodet"
+      },
+      {
+        "module": "head_pose",
+        "file": "face_landmarker.task",
+        "url": "https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task",
+        "sha256": "64184e229b263107bc2b804c6625db1341ff2bb731874b0bcc2fe6544e0bc9ff",
+        "upstream_hash": "crc32c=2FSEdQ==",
+        "checksum_source": "Google x-goog-hash CRC32C verified at initial download; SHA256 pinned locally",
+        "license": "Apache-2.0",
+        "source": "https://ai.google.dev/edge/mediapipe/solutions/vision/face_landmarker",
+        "model_card": "https://storage.googleapis.com/mediapipe-assets/Model%20Card%20MediaPipe%20Face%20Mesh%20V2.pdf"
+      }
+    ],
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "REAL_MODEL",
+    "input_ref": "tests/test_engine.py",
+    "expected": "Phân biệt mặt trên điện thoại và người",
+    "actual": "Tín hiệu tách riêng trong code/unit; chưa có dữ liệu ảnh/phone để nghiệm thu",
+    "status": "BLOCKED",
+    "evidence_ref": "reports/BAO_CAO_KIEM_THU.md",
+    "tester": "Codex automated execution",
+    "executed_at": null
+  },
+  {
+    "test_id": "TC13",
+    "requirement_ids": [
+      "FR-07"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "ENGINE",
+    "input_ref": "tests/test_engine.py",
+    "expected": "Một ảnh phone không mở",
+    "actual": "POSITIVE đơn rồi NEGATIVE không event",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "TC14",
+    "requirement_ids": [
+      "FR-07"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": [
+      {
+        "module": "face_detection",
+        "file": "face_detection_yunet_2023mar.onnx",
+        "url": "https://media.githubusercontent.com/media/opencv/opencv_zoo/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_detection_yunet/face_detection_yunet_2023mar.onnx",
+        "sha256": "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4",
+        "checksum_source": "OpenCV Zoo Git-LFS oid at pinned commit",
+        "license": "MIT",
+        "source": "https://github.com/opencv/opencv_zoo/tree/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_detection_yunet"
+      },
+      {
+        "module": "face_verification",
+        "file": "face_recognition_sface_2021dec.onnx",
+        "url": "https://media.githubusercontent.com/media/opencv/opencv_zoo/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_recognition_sface/face_recognition_sface_2021dec.onnx",
+        "sha256": "0ba9fbfa01b5270c96627c4ef784da859931e02f04419c829e83484087c34e79",
+        "checksum_source": "OpenCV Zoo Git-LFS oid at pinned commit",
+        "license": "Apache-2.0",
+        "source": "https://github.com/opencv/opencv_zoo/tree/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_recognition_sface"
+      },
+      {
+        "module": "object_detection",
+        "file": "object_detection_nanodet_2022nov.onnx",
+        "url": "https://media.githubusercontent.com/media/opencv/opencv_zoo/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/object_detection_nanodet/object_detection_nanodet_2022nov.onnx",
+        "sha256": "4b82da9944b88577175ee23a459dce2e26e6e4be573def65b1055dc2d9720186",
+        "checksum_source": "OpenCV Zoo Git-LFS oid at pinned commit",
+        "license": "Apache-2.0",
+        "source": "https://github.com/opencv/opencv_zoo/tree/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/object_detection_nanodet"
+      },
+      {
+        "module": "head_pose",
+        "file": "face_landmarker.task",
+        "url": "https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task",
+        "sha256": "64184e229b263107bc2b804c6625db1341ff2bb731874b0bcc2fe6544e0bc9ff",
+        "upstream_hash": "crc32c=2FSEdQ==",
+        "checksum_source": "Google x-goog-hash CRC32C verified at initial download; SHA256 pinned locally",
+        "license": "Apache-2.0",
+        "source": "https://ai.google.dev/edge/mediapipe/solutions/vision/face_landmarker",
+        "model_card": "https://storage.googleapis.com/mediapipe-assets/Model%20Card%20MediaPipe%20Face%20Mesh%20V2.pdf"
+      }
+    ],
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "REAL_MODEL",
+    "input_ref": "tests/test_engine.py;tests/test_api.py",
+    "expected": "Phone 1 giây/3 mẫu có minh chứng",
+    "actual": "Rule chuẩn hóa và evidence riêng PASS; chưa chạy phone positive thực",
+    "status": "BLOCKED",
+    "evidence_ref": "reports/BAO_CAO_KIEM_THU.md",
+    "tester": "Codex automated execution",
+    "executed_at": null
+  },
+  {
+    "test_id": "TC15",
+    "requirement_ids": [
+      "FR-08"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "ENGINE",
+    "input_ref": "tests/test_engine.py",
+    "expected": "Quay dưới 4 giây không HEAD_AWAY",
+    "actual": "Parameterized boundary dùng đồng hồ giả",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "TC16",
+    "requirement_ids": [
+      "FR-08"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "ENGINE",
+    "input_ref": "tests/test_engine.py",
+    "expected": "Đủ 4 giây mở, UNKNOWN không kéo dài góc",
+    "actual": "Threshold HEAD_AWAY và active-unknown đóng ở positive cuối; góc thật chưa đánh giá",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "TC17",
+    "requirement_ids": [
+      "FR-09"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "ENGINE",
+    "input_ref": "tests/test_engine.py",
+    "expected": "Một lượt 20 giây chỉ đếm một",
+    "actual": "Một turn, một HEAD_AWAY, không frequent",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "TC18",
+    "requirement_ids": [
+      "FR-09"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "ENGINE",
+    "input_ref": "tests/test_engine.py",
+    "expected": "Bốn lượt độc lập trong 60 giây",
+    "actual": "Neutral bắt buộc, frequent đúng một, unknown không làm neutral",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "TC19",
+    "requirement_ids": [
+      "FR-10"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": [
+      {
+        "module": "face_detection",
+        "file": "face_detection_yunet_2023mar.onnx",
+        "url": "https://media.githubusercontent.com/media/opencv/opencv_zoo/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_detection_yunet/face_detection_yunet_2023mar.onnx",
+        "sha256": "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4",
+        "checksum_source": "OpenCV Zoo Git-LFS oid at pinned commit",
+        "license": "MIT",
+        "source": "https://github.com/opencv/opencv_zoo/tree/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_detection_yunet"
+      },
+      {
+        "module": "face_verification",
+        "file": "face_recognition_sface_2021dec.onnx",
+        "url": "https://media.githubusercontent.com/media/opencv/opencv_zoo/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_recognition_sface/face_recognition_sface_2021dec.onnx",
+        "sha256": "0ba9fbfa01b5270c96627c4ef784da859931e02f04419c829e83484087c34e79",
+        "checksum_source": "OpenCV Zoo Git-LFS oid at pinned commit",
+        "license": "Apache-2.0",
+        "source": "https://github.com/opencv/opencv_zoo/tree/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_recognition_sface"
+      },
+      {
+        "module": "object_detection",
+        "file": "object_detection_nanodet_2022nov.onnx",
+        "url": "https://media.githubusercontent.com/media/opencv/opencv_zoo/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/object_detection_nanodet/object_detection_nanodet_2022nov.onnx",
+        "sha256": "4b82da9944b88577175ee23a459dce2e26e6e4be573def65b1055dc2d9720186",
+        "checksum_source": "OpenCV Zoo Git-LFS oid at pinned commit",
+        "license": "Apache-2.0",
+        "source": "https://github.com/opencv/opencv_zoo/tree/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/object_detection_nanodet"
+      },
+      {
+        "module": "head_pose",
+        "file": "face_landmarker.task",
+        "url": "https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task",
+        "sha256": "64184e229b263107bc2b804c6625db1341ff2bb731874b0bcc2fe6544e0bc9ff",
+        "upstream_hash": "crc32c=2FSEdQ==",
+        "checksum_source": "Google x-goog-hash CRC32C verified at initial download; SHA256 pinned locally",
+        "license": "Apache-2.0",
+        "source": "https://ai.google.dev/edge/mediapipe/solutions/vision/face_landmarker",
+        "model_card": "https://storage.googleapis.com/mediapipe-assets/Model%20Card%20MediaPipe%20Face%20Mesh%20V2.pdf"
+      }
+    ],
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "REAL_MODEL",
+    "input_ref": "docs/MO_HINH.md",
+    "expected": "Glare phải gaze UNKNOWN",
+    "actual": "Gaze mặc định tắt và có gate mắt, chưa có video glare/gaze kiểm chứng",
+    "status": "BLOCKED",
+    "evidence_ref": "reports/BAO_CAO_KIEM_THU.md",
+    "tester": "Codex automated execution",
+    "executed_at": null
+  },
+  {
+    "test_id": "TC20",
+    "requirement_ids": [
+      "FR-11"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "ENGINE",
+    "input_ref": "tests/test_engine.py",
+    "expected": "NO_MATCH INCONCLUSIVE NO_MATCH đủ điều kiện",
+    "actual": "Chỉ hai eligible NO_MATCH tăng; event một lần",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "TC21",
+    "requirement_ids": [
+      "FR-11"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "ENGINE",
+    "input_ref": "tests/test_engine.py",
+    "expected": "MATCH đặt lại bộ đếm",
+    "actual": "NO_MATCH MATCH NO_MATCH không event",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "TC22",
+    "requirement_ids": [
+      "FR-13"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "ENGINE",
+    "input_ref": "tests/test_engine.py",
+    "expected": "30 giây chỉ 1 event_id",
+    "actual": "Sáu rule đều được chạy tới 30 giây, create một và update cùng id",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "TC23",
+    "requirement_ids": [
+      "FR-13"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "ENGINE",
+    "input_ref": "tests/test_engine.py",
+    "expected": "Gap >1,5 giây ngắt chuỗi",
+    "actual": "Candidate reset, old/cached result không tăng mẫu/thời gian",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "TC24",
+    "requirement_ids": [
+      "FR-15"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "STORAGE",
+    "input_ref": "tests/test_api.py",
+    "expected": "Lỗi ghi ảnh vẫn giữ event MISSING",
+    "actual": "os.replace fault injection, object_key null, event/outbox còn",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "TC25",
+    "requirement_ids": [
+      "FR-16"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "API_CONCURRENCY",
+    "input_ref": "tests/test_api.py;tests/test_review_race.py",
+    "expected": "Hai giám thị cùng version chỉ một thắng",
+    "actual": "Hai thread CAS 200/409; thêm regression worker I/O không mất review",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "TC26",
+    "requirement_ids": [
+      "FR-17"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "API",
+    "input_ref": "tests/test_api.py",
+    "expected": "End lặp không nhận ảnh mới",
+    "actual": "End cùng/khác key không lặp notification; event đóng, frame 409",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "IT01",
+    "requirement_ids": [
+      "REQ-04",
+      "NFR-03"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "API",
+    "input_ref": "tests/test_api.py",
+    "expected": "Seq trùng hash không xử lý lại; hash khác409",
+    "actual": "DUPLICATE/FRAME_CONFLICT kiểm trước inference",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "IT02",
+    "requirement_ids": [
+      "REQ-04"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "API",
+    "input_ref": "tests/test_api.py",
+    "expected": "Ảnh sai thứ tự/ended bị loại",
+    "actual": "STALE_FRAME và SESSION_ENDED không tăng logic",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "IT03",
+    "requirement_ids": [
+      "NFR-01"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "API",
+    "input_ref": "tests/test_api.py",
+    "expected": "Không đọc chéo phiên/ảnh",
+    "actual": "Candidate B/outsider bị404; own candidate cũng không đọc evidence",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "IT04",
+    "requirement_ids": [
+      "NFR-01"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "WEBSOCKET",
+    "input_ref": "tests/test_api.py",
+    "expected": "Giám thị ngoài phân công bị từ chối",
+    "actual": "TestClient WS không đăng ký được, proctor hợp lệ subscribed",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "IT05",
+    "requirement_ids": [
+      "NFR-01",
+      "NFR-02"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "API",
+    "input_ref": "tests/test_api.py",
+    "expected": "Token hết hạn/thu hồi không nhận ảnh",
+    "actual": "TOKEN_EXPIRED/TOKEN_REVOKED; old generation sau resume bị401",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "IT06",
+    "requirement_ids": [
+      "REQ-04"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "API",
+    "input_ref": "tests/test_api.py;tests/test_recovery.py",
+    "expected": "Byte/pixel quá giới hạn bị413 trước inference",
+    "actual": "1MiB+,1920x1081 và chunked body test",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "IT07",
+    "requirement_ids": [
+      "REQ-04"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "API",
+    "input_ref": "tests/test_api.py",
+    "expected": "JPEG giả/hỏng trả415/422",
+    "actual": "Giả JPEG và SOI hỏng được từ chối, model calls0",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "IT08",
+    "requirement_ids": [
+      "FR-12",
+      "NFR-06"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "FAULT_INJECTION",
+    "input_ref": "tests/test_api.py;tests/test_recovery.py",
+    "expected": "Mô-đun lỗi UNAVAILABLE, không âm giả",
+    "actual": "Object error fixture UNKNOWN; worker exception được giám sát và phục hồi",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "IT09",
+    "requirement_ids": [
+      "NFR-08"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "NATIVE_PROCESS_STORAGE",
+    "input_ref": "tests/test_recovery.py",
+    "expected": "Restart giữ event và ghi gián đoạn",
+    "actual": "Child os._exit(23); WAL/outbox/event khôi phục, close tại last_observed, cần resume",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "IT10",
+    "requirement_ids": [
+      "NFR-08"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "OUTBOX",
+    "input_ref": "tests/test_api.py",
+    "expected": "Ngắt sau ghi không mất event",
+    "actual": "send fault -> retry/backoff; message_id giữ khi gửi lại; REST replay đọc được",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "IT11",
+    "requirement_ids": [
+      "NFR-05",
+      "NFR-08"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "LOAD",
+    "input_ref": "tests/test_api.py",
+    "expected": "Quá tải thật 10 phút chỉ một pending",
+    "actual": "Unit newest-only/rate limit PASS; chưa chạy stress 10 phút thực trên target",
+    "status": "BLOCKED",
+    "evidence_ref": "reports/BAO_CAO_KIEM_THU.md",
+    "tester": "Codex automated execution",
+    "executed_at": null
+  },
+  {
+    "test_id": "IT12",
+    "requirement_ids": [
+      "NFR-04"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "CONFIG",
+    "input_ref": "tests/test_api.py;tests/test_recovery.py",
+    "expected": "Phiên cũ giữ snapshot, phiên mới dùng config mới",
+    "actual": "Snapshot/hash và active config sau restart PASS",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "IT13",
+    "requirement_ids": [
+      "NFR-01"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "SECURITY",
+    "input_ref": "tests/test_api.py",
+    "expected": "URL quá hạn không đọc ảnh",
+    "actual": "Signature hết hạn bị403, URL còn hạn vẫn cần Bearer đúng người",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "IT14",
+    "requirement_ids": [
+      "FR-15"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "STORAGE",
+    "input_ref": "tests/test_api.py",
+    "expected": "Xóa quá hạn byte/vector, metadata DELETED",
+    "actual": "Vault purge theo mốc tương lai xóa file và profile hết hạn",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "IT15",
+    "requirement_ids": [
+      "NFR-01"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "SECURITY",
+    "input_ref": "tests/test_recovery.py",
+    "expected": "Không token/ảnh/vector trong audit/log ứng dụng",
+    "actual": "caplog/audit/error envelope test; access log tắt trong runner; không thay kiểm tra proxy vận hành",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "IT16",
+    "requirement_ids": [
+      "FR-16"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "API",
+    "input_ref": "tests/test_api.py;tests/test_history.py",
+    "expected": "Review cùng key không lặp lịch sử",
+    "actual": "ReviewAction một; body conflict409; manual retry cũng không lặp",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "IT17",
+    "requirement_ids": [
+      "NFR-06"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "MODEL_HEALTH",
+    "input_ref": "tests/test_recovery.py;models/manifest.json",
+    "expected": "Missing/bad checksum không ready",
+    "actual": "ModelSuite lỗi rõ, readiness503/liveness200; 4 file thật checksum PASS",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "IT18",
+    "requirement_ids": [
+      "REQ-04"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "API",
+    "input_ref": "tests/test_api.py",
+    "expected": "Offset tương lai không làm đủ thời lượng",
+    "actual": "INVALID_CAPTURE_TIME, số âm INVALID_REQUEST; duration dùng server",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  },
+  {
+    "test_id": "E2E01",
+    "requirement_ids": [
+      "FR-01",
+      "FR-12",
+      "FR-16",
+      "NFR-08"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "BROWSER_E2E",
+    "input_ref": "reports/ui-smoke.json",
+    "expected": "Toàn luồng theo tài liệu 03",
+    "actual": "Toàn luồng webcam + phone/2 người/quay đầu chưa có dữ liệu, browser bị chặn; SM01 API thực đã chạy.",
+    "status": "BLOCKED",
+    "evidence_ref": "reports/BAO_CAO_KIEM_THU.md",
+    "tester": "Codex automated execution",
+    "executed_at": null
+  },
+  {
+    "test_id": "E2E02",
+    "requirement_ids": [
+      "FR-01",
+      "FR-12",
+      "FR-16",
+      "NFR-08"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "BROWSER_E2E",
+    "input_ref": "reports/ui-smoke.json",
+    "expected": "Toàn luồng theo tài liệu 03",
+    "actual": "API mất ảnh/resume và logic ngắt ứng viên PASS; thao tác browser/offline thực chưa chạy.",
+    "status": "BLOCKED",
+    "evidence_ref": "reports/BAO_CAO_KIEM_THU.md",
+    "tester": "Codex automated execution",
+    "executed_at": null
+  },
+  {
+    "test_id": "E2E03",
+    "requirement_ids": [
+      "FR-01",
+      "FR-12",
+      "FR-16",
+      "NFR-08"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "BROWSER_E2E",
+    "input_ref": "reports/ui-smoke.json",
+    "expected": "Toàn luồng theo tài liệu 03",
+    "actual": "Native crash/outbox/replay PASS; UI loại trùng/reconnect chưa kiểm chứng trong browser.",
+    "status": "BLOCKED",
+    "evidence_ref": "reports/BAO_CAO_KIEM_THU.md",
+    "tester": "Codex automated execution",
+    "executed_at": null
+  },
+  {
+    "test_id": "E2E04",
+    "requirement_ids": [
+      "FR-01",
+      "FR-12",
+      "FR-16",
+      "NFR-08"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": "NOT_MODEL_QUALITY_EVIDENCE",
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "BROWSER_E2E",
+    "input_ref": "reports/ui-smoke.json",
+    "expected": "Toàn luồng theo tài liệu 03",
+    "actual": "API mô hình thật bad-quality → clear → MATCH và lịch sử giám thị PASS; UI chưa chạy được.",
+    "status": "BLOCKED",
+    "evidence_ref": "reports/BAO_CAO_KIEM_THU.md",
+    "tester": "Codex automated execution",
+    "executed_at": null
+  },
+  {
+    "test_id": "SM01",
+    "requirement_ids": [
+      "FR-01",
+      "FR-04",
+      "FR-06",
+      "FR-15",
+      "FR-16"
+    ],
+    "build_id": "0.1.0-fab15bba3f37",
+    "model_versions": [
+      {
+        "module": "face_detection",
+        "file": "face_detection_yunet_2023mar.onnx",
+        "url": "https://media.githubusercontent.com/media/opencv/opencv_zoo/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_detection_yunet/face_detection_yunet_2023mar.onnx",
+        "sha256": "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4",
+        "checksum_source": "OpenCV Zoo Git-LFS oid at pinned commit",
+        "license": "MIT",
+        "source": "https://github.com/opencv/opencv_zoo/tree/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_detection_yunet"
+      },
+      {
+        "module": "face_verification",
+        "file": "face_recognition_sface_2021dec.onnx",
+        "url": "https://media.githubusercontent.com/media/opencv/opencv_zoo/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_recognition_sface/face_recognition_sface_2021dec.onnx",
+        "sha256": "0ba9fbfa01b5270c96627c4ef784da859931e02f04419c829e83484087c34e79",
+        "checksum_source": "OpenCV Zoo Git-LFS oid at pinned commit",
+        "license": "Apache-2.0",
+        "source": "https://github.com/opencv/opencv_zoo/tree/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_recognition_sface"
+      },
+      {
+        "module": "object_detection",
+        "file": "object_detection_nanodet_2022nov.onnx",
+        "url": "https://media.githubusercontent.com/media/opencv/opencv_zoo/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/object_detection_nanodet/object_detection_nanodet_2022nov.onnx",
+        "sha256": "4b82da9944b88577175ee23a459dce2e26e6e4be573def65b1055dc2d9720186",
+        "checksum_source": "OpenCV Zoo Git-LFS oid at pinned commit",
+        "license": "Apache-2.0",
+        "source": "https://github.com/opencv/opencv_zoo/tree/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/object_detection_nanodet"
+      },
+      {
+        "module": "head_pose",
+        "file": "face_landmarker.task",
+        "url": "https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task",
+        "sha256": "64184e229b263107bc2b804c6625db1341ff2bb731874b0bcc2fe6544e0bc9ff",
+        "upstream_hash": "crc32c=2FSEdQ==",
+        "checksum_source": "Google x-goog-hash CRC32C verified at initial download; SHA256 pinned locally",
+        "license": "Apache-2.0",
+        "source": "https://ai.google.dev/edge/mediapipe/solutions/vision/face_landmarker",
+        "model_card": "https://storage.googleapis.com/mediapipe-assets/Model%20Card%20MediaPipe%20Face%20Mesh%20V2.pdf"
+      }
+    ],
+    "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+    "layer": "REAL_MODEL",
+    "input_ref": "tests/test_real_models.py",
+    "expected": "CPU pipeline và API đi qua mô hình thật",
+    "actual": "Separate reference → precheck bad/clear → SFace MATCH → 12 MediaPipe samples → READY → MONITORING → no-face event → encrypted evidence → human review/end",
+    "status": "PASS",
+    "evidence_ref": "reports/all-tests.xml",
+    "tester": "Codex automated execution",
+    "executed_at": "2026-11-13T10:39:56.770311+07:00"
+  }
+]

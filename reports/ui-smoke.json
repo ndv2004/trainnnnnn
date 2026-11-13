@@ -1,0 +1,7 @@
+{
+  "status": "BLOCKED",
+  "scope": "Browser rendering and end-to-end UI",
+  "reason": "Local Chromium fails to create its process singleton socket (Operation not permitted). Cloud browser localhost reaches a separate authenticated endpoint, not this workspace app.",
+  "javascript_syntax": "PASS (node --check)",
+  "api_pipeline_e2e": "PASS separately; this does not verify browser interaction"
+}

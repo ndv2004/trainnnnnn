@@ -1,0 +1,17 @@
+.venv/
+.venv-camera/
+.camera-data/
+*.camera.enc
+profiles.enc
+.profiles.lock
+.profiles.key
+runtime/
+models/*.onnx
+models/*.task
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.env
+reports/local_*.json
+test_data/

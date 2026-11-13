@@ -1,0 +1,22 @@
+{
+  "build_id": "0.1.0-fab15bba3f37",
+  "executed_at": "2026-11-13T10:39:56.770311+07:00",
+  "python": "3.12.14",
+  "os": "Linux container CPU",
+  "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+  "pytest": {
+    "passed": 66,
+    "failed": 0,
+    "skipped": 0,
+    "logic_api_recovery": 64,
+    "real_model_smoke": 2
+  },
+  "real_model_acceptance": "BLOCKED_NO_LABELED_EXAM_DATA",
+  "browser_ui": "BLOCKED_ENVIRONMENT",
+  "windows_target": "BLOCKED_NOT_AVAILABLE",
+  "tcp_http": "PASS",
+  "video_smoke": "PASS_40_FRAMES",
+  "warnings": [
+    "Starlette test harness deprecates httpx in favor of httpx2; no failure, pinned tested set retained."
+  ]
+}

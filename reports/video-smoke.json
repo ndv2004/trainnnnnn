@@ -1,0 +1,45 @@
+{
+  "host": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "processor": "",
+  "python": "3.12.14",
+  "runtime": "CPU",
+  "config_hash": "f0742271e73c8bfcbb3da6156bdfc4ebe6dc06432097089ab375777a50181852",
+  "config_version": "cfg-cpu-1",
+  "models": {
+    "face_detection": {
+      "name": "face_detection_yunet_2023mar.onnx",
+      "sha256": "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4",
+      "runtime": "CPU"
+    },
+    "object_detection": {
+      "name": "object_detection_nanodet_2022nov.onnx",
+      "sha256": "4b82da9944b88577175ee23a459dce2e26e6e4be573def65b1055dc2d9720186",
+      "runtime": "CPU"
+    },
+    "face_verification": {
+      "name": "face_recognition_sface_2021dec.onnx",
+      "sha256": "0ba9fbfa01b5270c96627c4ef784da859931e02f04419c829e83484087c34e79",
+      "runtime": "CPU"
+    },
+    "head_pose": {
+      "name": "face_landmarker.task",
+      "sha256": "64184e229b263107bc2b804c6625db1341ff2bb731874b0bcc2fe6544e0bc9ff",
+      "runtime": "CPU"
+    }
+  },
+  "source_type": "video_replay",
+  "identity": "NOT_EVALUATED",
+  "head_pose": "UNKNOWN_NO_BASELINE",
+  "temperature_c": null,
+  "timings_ms": {
+    "p50": 29.19676400051685,
+    "p95": 102.33889460014323
+  },
+  "frames": 40,
+  "created_events": 0,
+  "power_note": "NOT_RECORDED",
+  "elapsed_s": 2.038,
+  "status": "PASS",
+  "scope": "Offline video functional smoke, 8-second fixture; not a target-laptop benchmark",
+  "quality_metrics": "NOT_MEASURED_NO_LABELED_DATASET"
+}
